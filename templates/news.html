@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block body %}
+<div class="news-container">
+    <h1>News for: {{ topic }}</h1>
+    {% for article in news_data %}
+        {% if article.title %}
+            <div class="article">
+                <h2>{{ article.title }}</h2>
+                <p>{{ article.description }}</p>
+                <a href="{{ article.url }}" target="_blank">Read more</a>
+            </div>
+        {% endif %}
+    {% endfor %}
+</div>
+{% endblock %}

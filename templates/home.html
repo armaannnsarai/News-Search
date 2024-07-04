@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block body %}
+<div class="form">
+    <div class="title">Welcome to Instantly</div>
+    <div class="subtitle">Enter a News Topic!</div>
+    <form action="/save_topic" method="POST">
+        <div class="input-container ic1">
+            <input id="topic" name="topic" class="input" type="text" placeholder=" " />
+            <div class="cut"></div>
+            <label for="topic" class="placeholder">Topic</label>
+        </div>
+        <button type="submit" class="submit">SUBMIT</button>
+    </form>
+</div>
+{% endblock %}
